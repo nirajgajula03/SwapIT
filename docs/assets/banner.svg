@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="100%" height="280">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000c22"/>
+      <stop offset="45%" stop-color="#001845"/>
+      <stop offset="100%" stop-color="#032b69"/>
+    </linearGradient>
+
+    <!-- Electric Blue Gradient for "It" -->
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#2A67C9"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+
+    <!-- Warm Gold Gradient for Accents -->
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="50%" stop-color="#e9d8a6"/>
+      <stop offset="100%" stop-color="#ee9b00"/>
+    </linearGradient>
+
+    <!-- Underline Glow Gradient -->
+    <linearGradient id="underlineGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#2A67C9" stop-opacity="1"/>
+      <stop offset="75%" stop-color="#ee9b00" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ee9b00" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Glass Pill Gradient -->
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2A67C9" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#2A67C9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <style>
+    .brand-title {
+      font-family: 'Cabinet Grotesk', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Inter', 'Montserrat', 'Segoe UI', sans-serif;
+      font-weight: 900;
+      font-size: 84px;
+      letter-spacing: -2.5px;
+    }
+    .title-swap {
+      fill: #FFFFFF;
+    }
+    .title-it {
+      fill: url(#blueGlow);
+    }
+    .pill-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 11.5px;
+      letter-spacing: 3px;
+      fill: #7dd3fc;
+      text-transform: uppercase;
+    }
+    .subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', 'Inter', 'Segoe UI', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      fill: #cbd5e1;
+      letter-spacing: -0.2px;
+    }
+    .feature-item {
+      font-family: -apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', 'Inter', 'Segoe UI', sans-serif;
+      font-weight: 600;
+      font-size: 13.5px;
+      fill: #e2e8f0;
+      letter-spacing: 0.3px;
+    }
+    .feature-gold {
+      fill: #e9d8a6;
+      font-weight: 700;
+    }
+  </style>
+
+  <!-- Background Card -->
+  <rect width="1200" height="280" rx="20" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Ambient Glows -->
+  <circle cx="600" cy="130" r="280" fill="url(#centerGlow)"/>
+
+  <!-- Border Card -->
+  <rect width="1198" height="278" x="1" y="1" rx="19" fill="none" stroke="#2563eb" stroke-opacity="0.35" stroke-width="1.5"/>
+
+  <!-- Top Pill Badge -->
+  <g transform="translate(600, 46)">
+    <rect x="-165" y="-13" width="330" height="26" rx="13" fill="url(#pillGrad)" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1"/>
+    <circle cx="-140" cy="0" r="4" fill="#10b981"/>
+    <text x="0" y="4" text-anchor="middle" class="pill-text">CIRCULAR ECONOMY PLATFORM</text>
+  </g>
+
+  <!-- Centered Hero Typography: SwapIt (No left image!) -->
+  <g transform="translate(600, 142)">
+    <text text-anchor="middle" class="brand-title">
+      <tspan class="title-swap">Swap</tspan><tspan class="title-it">It</tspan>
+    </text>
+
+    <!-- Star Accent top right of 'It' -->
+    <path d="M 132 -38 L 134 -28 L 144 -26 L 134 -24 L 132 -14 L 130 -24 L 120 -26 L 130 -28 Z" fill="url(#goldGlow)"/>
+    <circle cx="148" cy="-12" r="2" fill="#38bdf8"/>
+
+    <!-- Aesthetic Dynamic Accent Line under SwapIt -->
+    <rect x="-160" y="18" width="320" height="3" rx="1.5" fill="url(#underlineGlow)"/>
+  </g>
+
+  <!-- Tagline Subtitle -->
+  <text x="600" y="204" text-anchor="middle" class="subtitle">
+    The Next-Generation Community Barter Platform &amp; Multimodal AI Repair Diagnostics
+  </text>
+
+  <!-- Features Footer Line -->
+  <g transform="translate(600, 242)">
+    <text x="0" text-anchor="middle" class="feature-item">
+      <tspan class="feature-gold">✦ SwapCoin</tspan> Valuation Balance &#160;&#160;•&#160;&#160; 
+      <tspan class="feature-gold">✦ Gemini 2.0</tspan> Multimodal Repair &#160;&#160;•&#160;&#160; 
+      <tspan class="feature-gold">✦ Atomic</tspan> Trade Settlement
+    </text>
+  </g>
+</svg>

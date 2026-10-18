@@ -1,8 +1,5 @@
-# <p align="center"><img src="https://raw.githubusercontent.com/nirajgajula03/SwapIT/main/docs/screenshots/02-home-dashboard.png" width="90" style="display:none;" /><strong>Swap<span style="color:#2A67C9;">It</span></strong></p>
-
 <p align="center">
-  <strong>The Next-Generation Circular Economy & Community Barter Platform</strong><br>
-  <em>Exchange pre-loved treasures, balance trade values with SwapCoins, and revive broken goods with Gemini-powered AI repair diagnostics.</em>
+  <img src="docs/assets/banner.svg" alt="SwapIt Banner" width="100%" />
 </p>
 
 <p align="center">
