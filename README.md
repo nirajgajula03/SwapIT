@@ -168,6 +168,84 @@ graph TD
 
 ---
 
+## 📁 Project Structure
+
+```bash
+SwapIT/
+├── 📁 backend/                        # Express 5 REST API & SQLite Persistence Engine
+│   ├── 📁 config/
+│   │   └── db.js                      # better-sqlite3 instance, WAL mode & auto-schema init
+│   ├── 📁 controllers/
+│   │   ├── authController.js          # User signup, login, JWT issuance & profile logic
+│   │   ├── itemController.js          # Marketplace & user inventory CRUD operations
+│   │   └── swapController.js          # Trade proposal handling & atomic coin transactions
+│   ├── 📁 middleware/
+│   │   └── authMiddleware.js          # Bearer JWT verification & request protection
+│   ├── 📁 routes/
+│   │   ├── auth.js                    # /api/auth routes
+│   │   ├── items.js                   # /api/items routes
+│   │   └── swaps.js                   # /api/swaps routes
+│   ├── .env.example                   # Backend environment template
+│   ├── package.json                   # Backend dependencies & script definitions
+│   ├── seed-and-capture.js            # Sample data seeder & headless screenshot automation
+│   ├── server.js                      # Express application entrypoint & middleware setup
+│   └── setup-db.js                    # Standalone database initialization script
+│
+├── 📁 frontend/                       # React 19 + TypeScript + Vite Single Page Application
+│   ├── 📁 components/
+│   │   ├── Icons.tsx                  # Modular SVG icon system
+│   │   ├── Layout.tsx                 # Core authenticated shell with topbar & container
+│   │   ├── Sidebar.tsx                # Dynamic navigation dock & profile summary
+│   │   └── ThemeToggle.tsx            # Light/Dark mode theme switcher button
+│   ├── 📁 contexts/
+│   │   ├── AuthContext.tsx            # Global authentication state, session token & user profile
+│   │   └── ThemeContext.tsx           # Dark / Light theme persistence provider
+│   ├── 📁 pages/
+│   │   ├── HomePage.tsx               # Command center dashboard, statistics & quick actions
+│   │   ├── ItemsPage.tsx              # Marketplace exploration with category/condition filters
+│   │   ├── LoginPage.tsx              # User authentication & credentials entry
+│   │   ├── MessagesPage.tsx           # Trader-to-trader chat & messaging interface
+│   │   ├── PaymentGatewayPage.tsx     # Simulated SwapCoin top-up & package purchase
+│   │   ├── PaymentSuccessPage.tsx     # Purchase confirmation & transaction summary
+│   │   ├── ProfilePage.tsx            # User profile management, bio & badges
+│   │   ├── RepairAssistantPage.tsx    # Multimodal AI repair diagnostics (Gemini 2.0 Flash)
+│   │   ├── SignupPage.tsx             # New member registration & onboarding
+│   │   ├── SwapsPage.tsx              # Bilateral proposal management & settlement ledger
+│   │   ├── UploadItemPage.tsx         # Item listing form & value appraisal
+│   │   └── WalletPage.tsx             # SwapCoin ledger, transaction history & tier progress
+│   ├── 📁 services/
+│   │   └── api.ts                     # Centralized typed HTTP client for backend endpoints
+│   ├── .env.example                   # Frontend environment template
+│   ├── App.tsx                        # Application routing tree (React Router v7)
+│   ├── index.css                      # Global Tailwind styling & scrollbar directives
+│   ├── index.html                     # HTML5 root template & CDN inclusions
+│   ├── index.tsx                      # React root rendering entrypoint
+│   ├── package.json                   # Frontend dependencies & Vite scripts
+│   ├── tsconfig.json                  # TypeScript compiler configuration
+│   ├── types.ts                       # Shared TypeScript interfaces & domain models
+│   └── vite.config.ts                 # Vite bundler, alias & proxy configuration
+│
+├── 📁 docs/                           # Documentation assets & visuals
+│   ├── 📁 assets/
+│   │   ├── banner.svg                 # Vector branding typography banner
+│   │   └── banner.png                 # Rasterized header preview
+│   └── 📁 screenshots/                # Real-time full-resolution platform screenshots
+│       ├── 01-login.png
+│       ├── 02-home-dashboard.png
+│       ├── 03-marketplace.png
+│       ├── 04-upload-item.png
+│       ├── 05-swaps.png
+│       ├── 06-wallet.png
+│       ├── 07-repair-assistant.png
+│       └── 08-profile.png
+│
+├── .gitignore                         # Git exclusion rules (node_modules, .env, *.db)
+├── LICENSE                            # MIT open-source license
+└── README.md                          # Master project documentation
+```
+
+---
+
 ## 🗄️ Database Schema Design
 
 SwapIt utilizes an integrated SQLite schema designed for referential integrity:
